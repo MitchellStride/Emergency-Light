@@ -1,0 +1,45 @@
+// From Lab3 Manuel
+program LAB3_PWM_CHRG
+dim dc1 as byte
+main:
+TRISA = S01
+cmcon0=0 'comparatorsoff
+ANSEL=$01
+ADCON0=$80 'right justified
+ADCON1=$70 'set clock frequency
+TRISC = 0
+PORTC=$FF 'initial value
+PWM1_Init(1000) ' initializes PWM module, freq = 1kHz.
+PWM1_Start ' starts PWM
+While true
+dc1= word(ADC_read(0) >> 2) 'read adc and kick two LSBs out Delay_ms(100) 'change duty every 100ms PWM1_Set_Duty(dc1) ' changes duty ratio
+wend
+end.
+
+//Our Code
+//tomoarr add comments, spruce up, see if works
+
+program LAB3_PWM_CHRG
+dim data1 as float
+dim vadc as float
+dim dc1 as float
+
+main:
+TRISA = $01
+cmcon0=0 'comparatorsoff
+ANSEL=$01
+ADCON0=$80 'right justified
+ADCON1=$70 'set clock frequency
+TRISC = 0
+PORTC=$FF 'initial value
+PWM1_Init(1000) ' initializes PWM module, freq = 1kHz.
+PWM1_Start ' starts PWM
+
+While true
+data1 = adc_read(0)
+vadc = (5*data1)/1023
+dc1 = 951.1-190.3*vadc
+PWM1_Set_Duty(dc1)
+Delay_ms(100)
+wend
+end
