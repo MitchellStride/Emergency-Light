@@ -1,0 +1,16 @@
+Case Notes
+Inside
+Battery,
+Board mount
+Transformer
+Room for cables
+
+
+Outside
+Light Mount on top
+Hole for Light mount wires
+Hole for power plug cord
+4 Leds
+2 Switches buttons
+usb charging slot
+LDR hole
