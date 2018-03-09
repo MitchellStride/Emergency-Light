@@ -19,8 +19,8 @@ While true
 data1 = adc_read(0)         'Reading adc
 vadc = (5*data1)/1023       'Converting
 dc1 = 951.1-190.3*vadc      'Calculated conversion
-PWM1_Set_Duty(dc1)          'Setting PWM
 Delay_ms(100)
+PWM1_Set_Duty(dc1)          'Setting PWM
 wend
 
 end.

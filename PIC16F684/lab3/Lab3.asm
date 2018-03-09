@@ -21,7 +21,7 @@ _main:
 ;Lab3.mbas,14 :: 		PORTC=$FF           'initial value
 	MOVLW      255
 	MOVWF      PORTC+0
-;Lab3.mbas,15 :: 		PWM1_Init(1000)     'initializes PWM module, freq = 1kHz.
+;Lab3.mbas,15 :: 		PWM1_Init(1000)     'init PWM freq = 1kHz.
 	BCF        T2CON+0, 0
 	BCF        T2CON+0, 1
 	BSF        T2CON+0, 0
@@ -103,12 +103,7 @@ L__main2:
 	MOVWF      _dc1+2
 	MOVF       R0+3, 0
 	MOVWF      _dc1+3
-;Lab3.mbas,22 :: 		PWM1_Set_Duty(dc1)          'Setting PWM
-	CALL       _Double2Byte+0
-	MOVF       R0+0, 0
-	MOVWF      FARG_PWM1_Set_Duty_new_duty+0
-	CALL       _PWM1_Set_Duty+0
-;Lab3.mbas,23 :: 		Delay_ms(100)
+;Lab3.mbas,22 :: 		Delay_ms(100)
 	MOVLW      130
 	MOVWF      R12+0
 	MOVLW      221
@@ -120,6 +115,19 @@ L__main6:
 	GOTO       L__main6
 	NOP
 	NOP
+;Lab3.mbas,23 :: 		PWM1_Set_Duty(dc1)          'Setting PWM
+	MOVF       _dc1+0, 0
+	MOVWF      R0+0
+	MOVF       _dc1+1, 0
+	MOVWF      R0+1
+	MOVF       _dc1+2, 0
+	MOVWF      R0+2
+	MOVF       _dc1+3, 0
+	MOVWF      R0+3
+	CALL       _Double2Byte+0
+	MOVF       R0+0, 0
+	MOVWF      FARG_PWM1_Set_Duty_new_duty+0
+	CALL       _PWM1_Set_Duty+0
 ;Lab3.mbas,24 :: 		wend
 	GOTO       L__main2
 L_end_main:
