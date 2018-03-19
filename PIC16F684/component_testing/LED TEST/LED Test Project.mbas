@@ -1,0 +1,51 @@
+program LDR_Test
+
+'Pinout of Circuit
+'AI0 - Data for Vbattery (Pin13)
+'AI1 - Rectified voltage read (Pin 12)
+'AI2 - LDR read (Pin 11)
+
+'RC0 - Test Button (Pin 10)
+'RC1 - Charging LED (Pin 9)
+'RC2 - Low Battery LED (Pin 8)
+'RC3 - Light Relay (Pin 7)
+'RC5 - PWM Charging (Pin5)
+
+
+'Init Variables
+dim pwm_data as float
+dim pwm_vadc as float
+dim pwm_dutyCycle as float
+dim rectified_data as float
+dim rectified_vadc as float
+dim light_data as float
+dim light_vadc as float
+
+
+main:
+
+'Init Ports (0-Output, 1-Input)
+TRISA = $07   'RA7-RA0
+TRISC = $01   'RC7-RC0
+PORTA = $00   'RA7-RA0
+PORTC = $00   'RC7-RC0
+
+cmcon0 = $00    'Turn Comparators Off
+
+'Init ADC
+ANSEL = $0F
+ADCON0 = $80
+ADCON1 = $70
+
+while true
+
+      PORTC.3 = 1
+      PORTC.2 = 1
+      delay_ms(1000)
+      PORTC.3 = 0
+      PORTC.2 = 0
+      delay_ms(1000)
+
+wend
+
+end.

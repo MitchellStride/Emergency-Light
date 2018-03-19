@@ -1,0 +1,13 @@
+0	1	mBPic.exe -MSF -DBG -pP16F684 -Y -DL -O11111114 -fo8 -N"H:\5800\Emergency-Light\PIC16F684\component_testing\LED TEST\LED Test Project.mbppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroBasic PRO for PIC\defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroBasic PRO for PIC\Uses\P16\" -SP"H:\5800\Emergency-Light\PIC16F684\component_testing\LED TEST\" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_String.mcl" "__Lib_CStdlib.mcl" "__Lib_MemManager.mcl" "__Lib_Conversions.mcl" "__Lib_Time.mcl" "__Lib_Trigon.mcl" "__Lib_Trigonometry.mcl" "__Lib_Button.mcl" "__Lib_Manchester.mcl" "__Lib_OneWire.mcl" "__Lib_PS2.mcl" "__Lib_Sound.mcl" "__Lib_SoftI2C.mcl" "__Lib_SoftSPI.mcl" "__Lib_SoftUART.mcl" "__Lib_ADC_A_B.mcl" "__Lib_EEPROM.mcl" "__Lib_PWM_c5.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl" "LED Test Project.mbas"	 
+diagnostics: 0	155	Available RAM: 112 [bytes], Available ROM: 2048 [bytes]	 
+diagnostics: 0	133	Compilation Started	H:\5800\Emergency-Light\PIC16F684\component_testing\LED TEST\LED Test Project.mbas
+hint: 1	1015	Hint: Compiling unit "H:\5800\Emergency-Light\PIC16F684\component_testing\LED TEST\LED Test Project.mbas"	LED Test Project.mbas
+hint: 51	1010	Hint: Unit "LED Test Project.mbas" has been recompiled	LED Test Project.mbas
+diagnostics: 0	134	Compiled Successfully	H:\5800\Emergency-Light\PIC16F684\component_testing\LED TEST\LED Test Project.mbas
+diagnostics: 0	139	All files Compiled in 16 ms	 
+hint: 0	1144	Used RAM (bytes): 0 (1%)  Free RAM (bytes): 112 (99%)	Used RAM (bytes): 0 (1%)  Free RAM (bytes): 112 (99%)
+hint: 0	1144	Used ROM (program words): 53 (3%)  Free ROM (program words): 1995 (97%)	Used ROM (program words): 53 (3%)  Free ROM (program words): 1995 (97%)
+diagnostics: 0	145	Project Linked Successfully	LED Test Project.mbppi
+diagnostics: 0	140	Linked in 62 ms	 
+diagnostics: 0	141	Project 'LED Test Project.mbppi' completed: 93 ms	 
+diagnostics: 0	103	Finished successfully: 16 Mar 2018, 11:55:54	LED Test Project.mbppi
