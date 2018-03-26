@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# MayoStride Innovations
 
-You can use the [editor on GitHub](https://github.com/MitchellStride/Emergency-Light/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Emergency Light Lab by Mitchell Stride, and Jordan Mayo.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Solar Tracking Control Module
 
-### Markdown
+<img src="{{ "/pics/Emergency-Front.png?raw=true" | prepend: site.baseurl }}" />
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<img src="{{ "/pics/brochure-snip.png?raw=true" | prepend: site.baseurl }}" />
 
-```markdown
-Syntax highlighted code block
+<img src="{{ "/pics/logo-trans.png?raw=true" | prepend: site.baseurl }}" />
 
-# Header 1
-## Header 2
-### Header 3
+## Product Specifications
 
-- Bulleted
-- List
+<img src="{{ "/pics/prod-spec.png?raw=true" | prepend: site.baseurl }}" />
 
-1. Numbered
-2. List
+## Images
 
-**Bold** and _Italic_ and `Code` text
+<img src="{{ "/pics/Block-Diagram.png?raw=true" | prepend: site.baseurl }}" />
 
-[Link](url) and ![Image](src)
-```
+<img src="{{ "/pics/txtpic.png?raw=true" | prepend: site.baseurl }}" />
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MitchellStride/Emergency-Light/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<img src="{{ "/pics/TriMetric-View Emergency-Light.png?raw=true" | prepend: site.baseurl }}" />
