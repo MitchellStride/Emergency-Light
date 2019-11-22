@@ -7,7 +7,7 @@ program Lab4_EmergencyLight
 
 'RC0 - Test Button (Pin 10)
 'RC1 - Charging LED (Pin 9)
-'RC2 - Low Battery LED (Pin 10)
+'RC2 - Low Battery LED (Pin 8)
 'RC3 - Light Relay (Pin 7)
 'RC5 - PWM Charging (Pin5)
 
@@ -25,10 +25,10 @@ dim light_vadc as float
 main:
 
 'Init Ports (0-Output, 1-Input)
-TRISA = %00000111   'RA7-RA0
-TRISC = %00000001   'RC7-RC0
-PORTA = %00000000   'RA7-RA0
-PORTC = %00000000   'RC7-RC0
+TRISA = $1F   'RA7-RA0
+TRISC = $01   'RC7-RC0
+PORTA = $00   'RA7-RA0
+PORTC = $00   'RC7-RC0
 
 cmcon0 = 0    'Turn Comparators Off
 
@@ -41,9 +41,17 @@ ADCON1 = $70
 PWM1_Init(1000)
 PWM1_Start
 
- PORTC.3 = 0' Turn Light Off
-
 while true
+while PORTA.4
+
+wend
+
+      if (PORTA.3) then            'Read Switch, if not pushed
+         PORTC.3 = 1                 'Light ON
+         PORTC.4 = 1                 'Battery Charging LED OFF
+
+      else
+      
     'Read battery level to set PWM
       pwm_data = adc_read(0)
       pwm_vadc = (5*pwm_data)/1023
@@ -55,34 +63,27 @@ while true
       light_data = adc_read(2)
       light_vadc = (5*light_data)/1023
 
-      if PORTC.0 = 1 then   'Read Switch, if not pushed
-         if rectified_vadc > 3 then   'Rectified voltage available
+         if rectified_vadc > 2.5 then   'Rectified voltage available
             PWM1_Set_Duty(pwm_dutyCycle)    'Set duty cycle
             PORTC.2 = 0                     'Low Battery LED OFF
-            PORTC.1 = 1                     'Battery Charging LED ON
+            PORTC.4 = 1                     'Battery Charging LED ON
             PORTC.3 = 0                     'Light OFF
 
          else                          'Rectified voltage not available
+           PORTC.4 = 0                 'Battery Charging LED OFF
             if pwm_vadc > 3.83 then         'Battery is operational
-               if light_vadc > 2.5 then     'Dark Room
-                  PORTC.1 = 0               'Battery Charging LED OFF
+               if light_vadc > 2 then       'Dark Room
                   PORTC.3 = 1               'Light ON
                else                         'Light Room
-                  PORTC.1 = 0               'Battery Charging LED OFF
                   PORTC.3 = 0               'Light OFF
                end if
             else                            'Battery is NOT operational
                PORTC.2 = 1                  'Low Battery LED ON
-               PORTC.1 = 0                  'Battery Charging LED ON
                PORTC.3 = 0                  'Light OFF
             end if
          end if
+         end if
+         delay_ms(100)
 
-      else                            'If Switch is pushed
-          PORTC.3 = 0                 'Light ON
-          PORTC.1 = 1                 'Battery Charging LED OFF
-      end if
-
-      delay_ms(1000)                  'Delay a second
   wend
 end.

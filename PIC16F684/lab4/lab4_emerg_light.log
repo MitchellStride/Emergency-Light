@@ -2,16 +2,16 @@
 diagnostics: 0	155	Available RAM: 112 [bytes], Available ROM: 2048 [bytes]	 
 diagnostics: 0	133	Compilation Started	H:\5800\Emergency-Light\PIC16F684\lab4\lab4_emerg_light.mbas
 hint: 1	1015	Hint: Compiling unit "H:\5800\Emergency-Light\PIC16F684\lab4\lab4_emerg_light.mbas"	lab4_emerg_light.mbas
-warning: 48	1509	Warning: Implicit typecast performed from "word" to "float"	lab4_emerg_light.mbas
-warning: 52	1509	Warning: Implicit typecast performed from "word" to "float"	lab4_emerg_light.mbas
-warning: 55	1509	Warning: Implicit typecast performed from "word" to "float"	lab4_emerg_light.mbas
-warning: 60	1509	Warning: Implicit typecast performed from "float" to "byte"	lab4_emerg_light.mbas
-hint: 88	1010	Hint: Unit "lab4_emerg_light.mbas" has been recompiled	lab4_emerg_light.mbas
+warning: 56	1509	Warning: Implicit typecast performed from "word" to "float"	lab4_emerg_light.mbas
+warning: 60	1509	Warning: Implicit typecast performed from "word" to "float"	lab4_emerg_light.mbas
+warning: 63	1509	Warning: Implicit typecast performed from "word" to "float"	lab4_emerg_light.mbas
+warning: 67	1509	Warning: Implicit typecast performed from "float" to "byte"	lab4_emerg_light.mbas
+hint: 89	1010	Hint: Unit "lab4_emerg_light.mbas" has been recompiled	lab4_emerg_light.mbas
 diagnostics: 0	134	Compiled Successfully	H:\5800\Emergency-Light\PIC16F684\lab4\lab4_emerg_light.mbas
-diagnostics: 0	139	All files Compiled in 15 ms	 
+diagnostics: 0	139	All files Compiled in 16 ms	 
 hint: 0	1144	Used RAM (bytes): 33 (29%)  Free RAM (bytes): 79 (71%)	Used RAM (bytes): 33 (29%)  Free RAM (bytes): 79 (71%)
-hint: 0	1144	Used ROM (program words): 1258 (61%)  Free ROM (program words): 790 (39%)	Used ROM (program words): 1258 (61%)  Free ROM (program words): 790 (39%)
+hint: 0	1144	Used ROM (program words): 1253 (61%)  Free ROM (program words): 795 (39%)	Used ROM (program words): 1253 (61%)  Free ROM (program words): 795 (39%)
 diagnostics: 0	145	Project Linked Successfully	lab4_emerg_light.mbppi
 diagnostics: 0	140	Linked in 78 ms	 
 diagnostics: 0	141	Project 'lab4_emerg_light.mbppi' completed: 109 ms	 
-diagnostics: 0	103	Finished successfully: 08 Mar 2018, 13:24:21	lab4_emerg_light.mbppi
+diagnostics: 0	103	Finished successfully: 18 Mar 2018, 21:17:59	lab4_emerg_light.mbppi
