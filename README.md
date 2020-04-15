@@ -2,7 +2,7 @@
 
 Emergency Light Lab by Mitchell Stride, and Jordan Mayo.
 
-## Solar Tracking Control Module
+## Emergency Light Unit
 
 <img src="{{ "/pics/Emergency-Front.png?raw=true" | prepend: site.baseurl }}" />
 
